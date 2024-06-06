@@ -1,0 +1,75 @@
+body {
+    gap: 0px 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    background-color: black;
+}
+
+.everything {
+    gap: 0px 0px;
+    margin: 0px 0px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 0.7fr 1.6fr 0.7fr; 
+    grid-template-rows: 110px 1.7fr 1fr;
+    gap: 0px 0px;
+    margin: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "sideleft header sideright"
+      "sideleft maincontent sideright"
+      "sideleft maincontent sideright";
+}
+
+.sideleft {
+    grid-area: sideleft;
+    background-color: black;
+}
+
+.sideright {
+    grid-area: sideright;
+    background-color: black;
+}
+
+.header {
+    grid-area: header;
+    background-color: #a60000;
+    gap: 0px 0px;
+    margin: 0px 0px;
+    border: 0px 0px;
+    padding: 0px 0px;
+}
+
+.maincontent {
+    grid-area: maincontent;
+    background-color: black;
+    color: white;
+}
+
+#grad1 {
+    background-color: #a60000; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, black , #a60000);
+}
+
+/* unvisited link */
+a:link {
+    color: #ff0000;
+}
+/* visited link */
+a:visited {
+    color: #c90000;
+}
+/* mouse over link */
+a:hover {
+    color: #ffffff;
+}
+/* selected link */
+a:active {
+    color: #ff0000;
+}
+
+h3 {
+    color: red;
+}
