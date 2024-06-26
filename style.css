@@ -1,8 +1,10 @@
 body {
     background-image: url(giphy.gif);
     margin: 0px;
-    min-height: 100%;
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    height: 100%;
 }
 /* unvisited link */
 a:link {
@@ -22,16 +24,26 @@ a:active {
 }
 
 .container {
-    width: 75%;
+    /*
+    width: 90%;
     display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr;
-    grid-template-rows: 0.35fr 1fr 1fr;
+    grid-template-columns: 25% 25% 50%;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 8px;
     padding: 8px;
     grid-template-areas:
-        "sidebar header header"
+        "sidebar content content"
         "sidebar content content"
         "sidebar content content";
+    margin-left: auto;
+    margin-right: auto;
+    */
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    gap: 8px;
+    padding: 8px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -46,19 +58,37 @@ a:active {
     text-align: right;
 }
 .content {
+    /*
     grid-area: content;
     padding: 0 8px;
     background-color: #1d162f;
     color: #ecd675;
+    */
+    flex: 1;
+    padding: 0 8px;
+    background-color: #1d162f;
+    color: #ecd675;
+    overflow: auto;
 }
 .sidebar {
+    /*
     grid-area: sidebar;
     background-color: #1d162f;
     color: #ecd675;
     text-align: center;
+    height: 100%;
     width: 100%;
-    position: relative;
-    top: -16px;
+    position: sticky;
+    */
+    width: 25%;
+    margin: 0;
+    background-color: #1d162f;
+    color: #ecd675;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    height: 98vh;
+    overflow: hidden;
 }
 .sidebar-index {
     list-style-type: none;
