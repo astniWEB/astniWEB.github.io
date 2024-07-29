@@ -108,6 +108,10 @@ a:active {
     color: #d7bb43;
     animation: glow 1s ease-in-out infinite alternate;
 }
+.title2 {
+    color: #d7bb43;
+    animation: glow 1s ease-in-out infinite alternate;
+}
 
 @keyframes glow {
     from {
